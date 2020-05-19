@@ -8,7 +8,6 @@ find_package(PNG REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(Freetype)
 find_package(Threads)
-find_package(Fontconfig)
 
 
 include(Configure_config.cmake)
@@ -25,10 +24,6 @@ endif()
 
 include_directories(${PIXMAN_INCLUDE_DIR} ${PNG_INCLUDE_DIR} ${ZLIB_INCLUDE_DIR})
 list(APPEND CAIRO_LIBS  ${PIXMAN_LIBRARY} ${PNG_LIBRARY} ${ZLIB_LIBRARY})
-
-if(FONTCONFIG_FOUND)
-    list(APPEND CAIRO_LIBS ${FONTCONFIG_LIBRARY})
-endif()
 
 if(FREETYPE_FOUND)
     find_package(BZip2)
