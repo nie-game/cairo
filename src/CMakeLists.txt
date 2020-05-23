@@ -643,7 +643,6 @@ set(SOURCES ${enabled_cairo_sources})
 add_library(cairo-static ${SOURCES} ${STATIC_SOURCES})
 target_link_libraries(cairo-static ${CAIRO_LIBS})
 
-install(TARGETS cairo RUNTIME DESTINATION bin ARCHIVE DESTINATION lib LIBRARY DESTINATION lib)
 install(TARGETS cairo-static RUNTIME DESTINATION bin ARCHIVE DESTINATION lib LIBRARY DESTINATION lib)
 
 install(FILES ${enabled_cairo_headers} DESTINATION include/cairo)
